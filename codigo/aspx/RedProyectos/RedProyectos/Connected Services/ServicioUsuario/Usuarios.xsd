@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddAmigo" type="tns:AddAmigo" />
+  <xs:element name="AddAmigoResponse" type="tns:AddAmigoResponse" />
+  <xs:element name="AddConocimiento" type="tns:AddConocimiento" />
+  <xs:element name="AddConocimientoResponse" type="tns:AddConocimientoResponse" />
+  <xs:element name="AgregarUsuario" type="tns:AgregarUsuario" />
+  <xs:element name="AgregarUsuarioResponse" type="tns:AgregarUsuarioResponse" />
+  <xs:element name="Existente" type="tns:Existente" />
+  <xs:element name="ExistenteResponse" type="tns:ExistenteResponse" />
+  <xs:element name="aplicarAsociacion" type="tns:aplicarAsociacion" />
+  <xs:element name="aplicarAsociacionResponse" type="tns:aplicarAsociacionResponse" />
+  <xs:element name="deleteAmigo" type="tns:deleteAmigo" />
+  <xs:element name="deleteAmigoResponse" type="tns:deleteAmigoResponse" />
+  <xs:element name="getDatos" type="tns:getDatos" />
+  <xs:element name="getDatosResponse" type="tns:getDatosResponse" />
+  <xs:element name="puntarMasKarma" type="tns:puntarMasKarma" />
+  <xs:element name="puntarMasKarmaResponse" type="tns:puntarMasKarmaResponse" />
+  <xs:element name="puntarMenosKarma" type="tns:puntarMenosKarma" />
+  <xs:element name="puntarMenosKarmaResponse" type="tns:puntarMenosKarmaResponse" />
+  <xs:complexType name="getDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nick_name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntarMasKarma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="conocimiento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntarMasKarmaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Existente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nick_name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExistenteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAmigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user" type="xs:string" />
+      <xs:element minOccurs="0" name="amigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntarMenosKarma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="conocimiento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntarMenosKarmaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="nick_name" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenia" type="xs:string" />
+      <xs:element name="dinero" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddAmigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="amigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aplicarAsociacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="asociacion" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aplicarAsociacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddConocimiento">
+    <xs:sequence>
+      <xs:element name="karma" type="xs:int" />
+      <xs:element minOccurs="0" name="conocimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddConocimientoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

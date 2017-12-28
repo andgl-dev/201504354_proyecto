@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Usuarios" targetNamespace="http://servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/RedProyectos/Usuarios?xsd=1" namespace="http://servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="AgregarUsuario">
+    <part name="parameters" element="tns:AgregarUsuario" />
+  </message>
+  <message name="AgregarUsuarioResponse">
+    <part name="parameters" element="tns:AgregarUsuarioResponse" />
+  </message>
+  <message name="Existente">
+    <part name="parameters" element="tns:Existente" />
+  </message>
+  <message name="ExistenteResponse">
+    <part name="parameters" element="tns:ExistenteResponse" />
+  </message>
+  <message name="getDatos">
+    <part name="parameters" element="tns:getDatos" />
+  </message>
+  <message name="getDatosResponse">
+    <part name="parameters" element="tns:getDatosResponse" />
+  </message>
+  <message name="puntarMasKarma">
+    <part name="parameters" element="tns:puntarMasKarma" />
+  </message>
+  <message name="puntarMasKarmaResponse">
+    <part name="parameters" element="tns:puntarMasKarmaResponse" />
+  </message>
+  <message name="AddConocimiento">
+    <part name="parameters" element="tns:AddConocimiento" />
+  </message>
+  <message name="AddConocimientoResponse">
+    <part name="parameters" element="tns:AddConocimientoResponse" />
+  </message>
+  <message name="AddAmigo">
+    <part name="parameters" element="tns:AddAmigo" />
+  </message>
+  <message name="AddAmigoResponse">
+    <part name="parameters" element="tns:AddAmigoResponse" />
+  </message>
+  <message name="deleteAmigo">
+    <part name="parameters" element="tns:deleteAmigo" />
+  </message>
+  <message name="deleteAmigoResponse">
+    <part name="parameters" element="tns:deleteAmigoResponse" />
+  </message>
+  <message name="aplicarAsociacion">
+    <part name="parameters" element="tns:aplicarAsociacion" />
+  </message>
+  <message name="aplicarAsociacionResponse">
+    <part name="parameters" element="tns:aplicarAsociacionResponse" />
+  </message>
+  <message name="puntarMenosKarma">
+    <part name="parameters" element="tns:puntarMenosKarma" />
+  </message>
+  <message name="puntarMenosKarmaResponse">
+    <part name="parameters" element="tns:puntarMenosKarmaResponse" />
+  </message>
+  <portType name="Usuarios">
+    <operation name="AgregarUsuario">
+      <input wsam:Action="http://servicios/Usuarios/AgregarUsuarioRequest" message="tns:AgregarUsuario" />
+      <output wsam:Action="http://servicios/Usuarios/AgregarUsuarioResponse" message="tns:AgregarUsuarioResponse" />
+    </operation>
+    <operation name="Existente">
+      <input wsam:Action="http://servicios/Usuarios/ExistenteRequest" message="tns:Existente" />
+      <output wsam:Action="http://servicios/Usuarios/ExistenteResponse" message="tns:ExistenteResponse" />
+    </operation>
+    <operation name="getDatos">
+      <input wsam:Action="http://servicios/Usuarios/getDatosRequest" message="tns:getDatos" />
+      <output wsam:Action="http://servicios/Usuarios/getDatosResponse" message="tns:getDatosResponse" />
+    </operation>
+    <operation name="puntarMasKarma">
+      <input wsam:Action="http://servicios/Usuarios/puntarMasKarmaRequest" message="tns:puntarMasKarma" />
+      <output wsam:Action="http://servicios/Usuarios/puntarMasKarmaResponse" message="tns:puntarMasKarmaResponse" />
+    </operation>
+    <operation name="AddConocimiento">
+      <input wsam:Action="http://servicios/Usuarios/AddConocimientoRequest" message="tns:AddConocimiento" />
+      <output wsam:Action="http://servicios/Usuarios/AddConocimientoResponse" message="tns:AddConocimientoResponse" />
+    </operation>
+    <operation name="AddAmigo">
+      <input wsam:Action="http://servicios/Usuarios/AddAmigoRequest" message="tns:AddAmigo" />
+      <output wsam:Action="http://servicios/Usuarios/AddAmigoResponse" message="tns:AddAmigoResponse" />
+    </operation>
+    <operation name="deleteAmigo">
+      <input wsam:Action="http://servicios/Usuarios/deleteAmigoRequest" message="tns:deleteAmigo" />
+      <output wsam:Action="http://servicios/Usuarios/deleteAmigoResponse" message="tns:deleteAmigoResponse" />
+    </operation>
+    <operation name="aplicarAsociacion">
+      <input wsam:Action="http://servicios/Usuarios/aplicarAsociacionRequest" message="tns:aplicarAsociacion" />
+      <output wsam:Action="http://servicios/Usuarios/aplicarAsociacionResponse" message="tns:aplicarAsociacionResponse" />
+    </operation>
+    <operation name="puntarMenosKarma">
+      <input wsam:Action="http://servicios/Usuarios/puntarMenosKarmaRequest" message="tns:puntarMenosKarma" />
+      <output wsam:Action="http://servicios/Usuarios/puntarMenosKarmaResponse" message="tns:puntarMenosKarmaResponse" />
+    </operation>
+  </portType>
+  <binding name="UsuariosPortBinding" type="tns:Usuarios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AgregarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Existente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="puntarMasKarma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddAmigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAmigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="aplicarAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="puntarMenosKarma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Usuarios">
+    <port name="UsuariosPort" binding="tns:UsuariosPortBinding">
+      <soap:address location="http://localhost:8080/RedProyectos/Usuarios" />
+    </port>
+  </service>
+</definitions>

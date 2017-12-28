@@ -1,0 +1,7 @@
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\bin\RedProyectos.dll.config
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\bin\RedProyectos.dll
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\bin\RedProyectos.pdb
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\obj\Debug\RedProyectos.csprojResolveAssemblyReference.cache
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\obj\Debug\RedProyectos.csproj.CoreCompileInputs.cache
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\obj\Debug\RedProyectos.dll
+C:\Users\Osman Lima\source\repos\RedProyectos\RedProyectos\obj\Debug\RedProyectos.pdb
